@@ -1,22 +1,22 @@
 let pokemonList = [
 {
   name: "Pikachu",
-  type: [electric],
+  type: ["electric"],
   height: 0.4
 },
 {
   name: "Bulbasaur",
-  type: [grass, poison],
+  type: ["grass", "poison"],
   height: 0.7
 },
 {
   name: "Charmander",
-  type: [fire],
+  type: ["fire"],
   height: 0.6
 },
 {
   name:  "Squirtle",
-  type: [water],
+  type: ["water"],
   height: 0.5
 }
 ]
