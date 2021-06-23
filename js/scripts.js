@@ -20,3 +20,13 @@ let pokemonList = [
   height: 0.5
 }
 ]
+
+
+for (let i = 0; i < pokemonList.length; i++) {
+  document.write(pokemonList[i].name + "- Height: " + pokemonList[i].height)
+  console.log(pokemonList[i].name + " Height: " + pokemonList[i].height)
+if ([pokemonList[i].height] < 0.5) {
+  document.write(" - This Pokemon is SMOL!")
+}
+ document.write("<br>");
+}
