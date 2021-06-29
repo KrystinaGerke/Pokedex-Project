@@ -22,11 +22,15 @@ let pokemonList = [
 ]
 
 
-for (let i = 0; i < pokemonList.length; i++) {
+/* for (let i = 0; i < pokemonList.length; i++) {
   document.write(pokemonList[i].name + "- Height: " + pokemonList[i].height)
   console.log(pokemonList[i].name + " Height: " + pokemonList[i].height)
 if ([pokemonList[i].height] < 0.5) {
   document.write(" - This Pokemon is SMOL!")
 }
  document.write("<br>");
-}
+} */
+
+pokemonList.forEach(function(pokemon){
+  console.log(pokemon);
+});
