@@ -39,6 +39,10 @@ console.log(pokemonRepository.getAll());
 pokemonRepository.add({ name: 'Eevee' });
 console.log(pokemonRepository.getAll());
 
+pokemonRepository.getAll().forEach(function(pokemon) {
+  document.write(pokemon.name + " " + "height : " + pokemon.height + " " + pokemon.type + "</br>");
+});
+
 /* for (let i = 0; i < pokemonList.length; i++) {
   document.write(pokemonList[i].name + "- Height: " + pokemonList[i].height)
   console.log(pokemonList[i].name + " Height: " + pokemonList[i].height)
