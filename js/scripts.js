@@ -1,5 +1,5 @@
 let pokemonRepository = (function () {
-  let pokemonList = [
+  let repository = [
     {
       name: "Pikachu",
       type: ["electric"],
@@ -22,41 +22,58 @@ let pokemonRepository = (function () {
     }
   ];
   function add(pokemon) {
-      pokemonList.push(pokemon);
+    if (
+      typeof pokemon === "object" &&
+      "name" in pokemon &&
+      "type" in pokemon &&
+      "height" in pokemon
+    ) {
+      repository.push(pokemon);
+    } else {
+      console.log("pokemon is not correct");
     }
+  }
 
     function getAll() {
-      return pokemonList;
+      return repository;
     }
+
+    function addListItem(pokemon){
+      let pokemonList = document.querySelector(".pokemon-list");
+      let listpokemon = document.createElement("li");
+      let button = document.createElement("button");
+      button.innerText = pokemon.name;
+      button.classList.add("button-class");
+      listpokemon.appendChild(button);
+      pokemonList.appendChild(listpokemon);
+        button.addEventListener('click', function(){
+		    showDetails(pokemon);
+        });
+    }
+
+    function showDetails(pokemon){
+	  console.log(pokemon);
+  }
 
     return {
       add: add,
-      getAll: getAll
+      getAll: getAll,
+      addListItem: addListItem,
+      showDetails: showDetails
     };
+
   })();
 
 console.log(pokemonRepository.getAll());
-pokemonRepository.add(
-  {
+
+pokemonRepository.add({
   name: 'Eevee',
   type: ["normal"],
   height: 1.0
 });
+
 console.log(pokemonRepository.getAll());
 
-pokemonRepository.getAll().forEach(function(pokemon) {
-  document.write(pokemon.name + " " + "height : " + pokemon.height + " " + pokemon.type + "</br>");
+pokemonRepository.getAll().forEach(function (pokemon) {
+  pokemonRepository.addListItem(pokemon);
 });
-
-/* for (let i = 0; i < pokemonList.length; i++) {
-  document.write(pokemonList[i].name + "- Height: " + pokemonList[i].height)
-  console.log(pokemonList[i].name + " Height: " + pokemonList[i].height)
-if ([pokemonList[i].height] < 0.5) {
-  document.write(" - This Pokemon is SMOL!")
-}
- document.write("<br>");
-} */
-
-/*pokemonList.forEach(function(pokemon){
-  console.log(pokemon);
-});*/
