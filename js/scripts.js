@@ -36,7 +36,12 @@ let pokemonRepository = (function () {
   })();
 
 console.log(pokemonRepository.getAll());
-pokemonRepository.add({ name: 'Eevee' });
+pokemonRepository.add(
+  {
+  name: 'Eevee',
+  type: ["normal"],
+  height: 1.0
+});
 console.log(pokemonRepository.getAll());
 
 pokemonRepository.getAll().forEach(function(pokemon) {
