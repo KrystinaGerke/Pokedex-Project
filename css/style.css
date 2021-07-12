@@ -1,9 +1,270 @@
-ul{
-  list-style-type: none;
+* {
+	box-sizing: border-box;
 }
 
-#search-button{
-  background-color: #C00;
-  color: #fff;
-  border-color: #3B4CCA;
+body {
+	height: 100%;
+	background-color: black;
+	color: black;
+	font-family: 'Helvetica', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.6;
+	position: relative;
+	min-height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.center {
+	text-align: center;
+}
+
+.logo {
+  width: 300px;
+  text-align: center;
+  padding: 50px;
+}
+
+li.list-group-item {
+  background-color: #ADD8E6;
+}
+
+a {
+	color: #3b4caa;
+	color: #0068db;
+}
+
+ul {
+	 list-style-type: none;
+	 padding: 0;
+	 margin: 0;
+}
+
+h1 {
+	font-size: 30px;
+	font-weight: 700;
+	font-family: 'Helvetica', sans-serif;
+	line-height: normal;
+	color: #3b4caa;
+	}
+
+h2 {
+	font-size: 26px;
+	font-weight: 400;
+	font-family: 'Helvetica', sans-serif;
+	line-height: normal;
+	color: #d66c00;
+}
+
+p {
+	font-size: 16px;
+	font-weight: 300;
+	font-family: 'Helvetica', sans-serif;
+	line-height: 1.0;
+}
+
+.strong {
+	font-weight: 400;
+	color: #357b70;
+	font-size: 105%;
+	padding: 0px 1.5px;
+}
+
+/* layout search pokemon */
+.form-control {
+background-color: #4caf50; /* Green */
+border: none;
+color: white;
+padding: 16px 16px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 14px 2px;
+-webkit-transition-duration: 0.4s; /* Safari */
+transition-duration: 0.4s;
+cursor: pointer;
+background-color: #ffde00;
+color: black;
+border: 2px solid #d66c00;
+width: 230px;
+height: 30px;
+}
+
+.hidden {
+	display: none;
+}
+
+
+/* layout button */
+.btn {
+	background-color: #b3a125;
+	border: none;
+	color: white;
+	padding: 16px 16px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 5px 5px;
+	-webkit-transition-duration: 0.9s; /* Safari */
+	transition-duration: 0.9s;
+	cursor: pointer;
+	background-color: #c00;
+	color: black;
+	border: 3px solid #f00;
+	width: 230px;
+	height: 50px;
+}
+	.padding {
+	padding-bottom: 20px;
+}
+
+/* Layout Modal container */
+#modal-container {
+	display: none;
+}
+
+#modal-container.is-visible {
+	position: fixed;
+	padding: 0;
+	box-sizing: border-box;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #b3a125;
+
+	/* to show it above other content */
+	z-index: 999;
+
+	/* to allow scrolling if the screen is not high enough*/
+	overflow: auto;
+
+	/* this is used to center the modal */
+	display: grid;
+	text-align: center;
+}
+
+.modal-body {
+	margin: auto;
+	box-sizing: border-box;
+	background: #fff;
+	padding: 0;
+	width: 100%;
+	max-width: 500px;
+	text-align: center;
+	min-height: 400px;
+}
+
+.modal-close {
+	float: right;
+	-webkit-appearance: none;
+	border: 0;
+	background: none;
+	color: #b3a125;
+	text-decoration: underline;
+}
+
+.modal h1 {
+	margin: 20px 0 0 20px;
+	text-align: left;
+
+}
+
+.modal p {
+	margin-bottom: 20px;
+}
+
+.modal img {
+	height: 200px;
+}
+
+.modal span {
+	padding: 20px;
+}
+
+/* Type Background Colors */
+
+.type {
+	padding: 0;
+	margin:0 auto;
+	text-align: center;
+	float: left;
+	max-width: 35%;
+	border-radius: 10px;
+}
+
+.type p{
+	margin: 10px;
+}
+
+.fire {
+	background-color:#f19100;
+}
+.water {
+	background-color:#0060f1;
+	color:#fff;
+}
+.grass {
+	background-color:#07861c;
+	color:#fff;
+}
+.bug {
+	background-color:#043f0e;
+	color:#fff;
+}
+.poison {
+	background-color:#7c0a80;
+	color:#fff;
+}
+.ghost {
+	background-color:#3a062d;
+	color:#fff;
+}
+.rock {
+	background-color:#444038;
+	color:#fff;
+}
+.ground {
+	background-color:#633d1e;
+	color:#fff;
+}
+.flying {
+	background-color:#65c5cc;
+}
+.dragon {
+	background-color:#198f6c;
+	color:#fff;
+}
+.electric {
+	background-color:#dbdf21;
+}
+.normal {
+	background-color:#99a18e;
+}
+.fairy {
+	background-color:#dd3b9f;
+	color:#fff;
+}
+.fighting {
+	background-color:#6e3f00;
+	color:#fff;
+}
+.psychic {
+	background-color:#db6db1;
+	color:#fff;
+}
+.ice {
+	background-color:#179edd;
+	color:#fff;
+}
+.steel {
+	background-color:#a7a7a7;
+}
+.dark {
+	background-color:#131313;
+	color:#fff;
 }

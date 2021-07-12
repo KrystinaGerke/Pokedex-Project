@@ -11,53 +11,44 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    
-    <!-- nav bar -->
-    <nav class="navbar navbar-light bg-light justify-content-between">
-  <a class="navbar-brand">Pokedex</a>
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button id="search-button" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
-</nav>
 
+    <!-- container main content -->
+  			<main>
 
-    <!-- div to create pokemon-list with js-Bootstrap -->
-          <div>
-          	<ul class="pokemon-list"></ul>
-          </div>
+  				<!-- Search Bar -->
+  				<label for="filter_pokemons" class="hidden">Search Pokémon by name</label>
+  					<input type="text" class="form-control form-inline" id="filter_pokemons" placeholder="Search Pokemon"/>
+  				<!-- div to create pokemon-list with js-Bootstrap -->
+  				<ul class="list-group"></ul>
+  				<!-- Modal -->
+  				<div
+  					class="modal fade"
+  				  id="pokemonModal"
+  					tabindex="-1"
+  					role="dialog"
+  					aria-labelledby="pokemonModalLabel"
+  					aria-hidden="true"
+  				>
+  					<div class="modal-dialog" role="document">
+  						<div class="modal-content">
+  							<div class="modal-header">
+  								<h1 class="modal-title" id="pokemonModalLabel">Modal title</h1>
+  								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+  									<span aria-hidden="true">&times;</span>
+  								</button>
+  							</div>
+  							<div class="modal-body">
+  								...
+  							</div>
+  							<div class="modal-footer hidden">
+  								<button type="button" id="types-1" class="btn btn-secondary" data-dismiss="modal"></button>
+  								<button type="button" id="types-2" class="btn btn-primary"></button>
+  							</div>
+  						</div>
+  					</div>
+  				</div>
 
-    				<!-- Modal -->
-    				<div
-    					class="modal fade"
-    				  id="pokemonModal"
-    					tabindex="-1"
-    					role="dialog"
-    					aria-labelledby="pokemonModalLabel"
-    					aria-hidden="true"
-    				>
-    					<div class="modal-dialog" role="document">
-    						<div class="modal-content">
-    							<div class="modal-header">
-    								<h1 class="modal-title" id="pokemonModalLabel">Modal title</h1>
-    								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-    									<span aria-hidden="true">&times;</span>
-    								</button>
-    							</div>
-    							<div class="modal-body">
-    								...
-    							</div>
-    							<div class="modal-footer hidden">
-    								<button type="button" id="types-1" class="btn btn-secondary" data-dismiss="modal"></button>
-    								<button type="button" id="types-2" class="btn btn-primary"></button>
-    							</div>
-    						</div>
-    					</div>
-    				</div>
-
-    <script src="js/promise-polyfill.js"></script>
-		<script src="js/fetch-polyfill.js"></script>
-		<script src="js/tota11y.min.js"></script>
+  			</main>
     <!-- adding bootstrap info -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
